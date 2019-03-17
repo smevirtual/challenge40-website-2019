@@ -1,0 +1,45 @@
+[params]
+    [[params.leaders]]
+    name = "Adam J. Cook"
+    info_url = "https://www.linkedin.com/in/adam-j-cook/"
+    title = "Chief Technical Officer"
+    company_name = "Alliedstrand"
+    company_url = "http://www.alliedstrand.com"
+    profile_picture_filename = "adam_cook_profile.png"
+
+    [[params.leaders]]
+    name = "Justice Diven"
+    info_url = "https://www.linkedin.com/in/justice-diven-4483724/"
+    title = "Intelligent Operations Manager"
+    company_name = "BP Onshore Lower 48"
+    company_url = "https://www.bp.com"
+    profile_picture_filename = "justice_diven_profile.png"
+
+    [[params.leaders]]
+    name = "Melissa Dochter"
+    info_url = "https://www.linkedin.com/in/melissa-dochter-8b558b26/"
+    title = "OEM Machine Solutions Sales Engineer"
+    company_name = "Schneider Electric"
+    company_url = "https://www.schneider-electric.com"
+    profile_picture_filename = "melissa_dochter_profile.png"
+
+    [[params.leaders]]
+    name = "Ron Gill"
+    info_url = "https://www.linkedin.com/in/ron-gill-atf-hsme-cmfge-9aa77b1b/"
+    title = "Technical Fellow (Retired)"
+    company_name = "The Boeing Company"
+    company_url = "http://www.boeing.com"
+    profile_picture_filename = "ron_gill_profile.png"
+
+    [[params.leaders]]
+    name = "Mark Price"
+    info_url = "https://www.linkedin.com/in/mark-price-93390b14/"
+    title = "Chapter Development and Relations Manager"
+    company_name = "SME"
+    company_url = "http://www.sme.org"
+    profile_picture_filename = "mark_price_profile.png"
+
+    [[params.leaders]]
+    name = "Thomas Gaddini"
+    title = "Treasurer"
+    profile_picture_filename = "blank_profile.png"
