@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<!-- Force IE 8/9/10 to use its latest rendering engine -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+<meta name="description" content="{{ .Site.Params.seo.description }}">
+<meta name="keywords" content="{{ delimit .Site.Params.seo.keywords "," }}">
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+<meta name="google" content="nositelinkssearchbox">
+
+<!-- For Facebook, Reddit and some other social networks -->
+<!-- Thumbnail size is 500px x 500px -->
+<meta name="thumbnail"           content="{{ .Site.BaseURL }}google_thumbnail--dark.png">
+<meta property="og:type"         content="website">
+<meta property="og:title"        content="{{ .Site.Title }}">
+<meta property="og:description"  content="{{ .Site.Params.social.description }}">
+
+<!-- Facebook Card image size is specified in 'og:image:width' and 'og:image:height' -->
+<meta property="og:image"        content="{{ .Site.BaseURL }}og_card_thumbnail--dark.png">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="1200">
+
+<!-- For Twitter -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:site"        content="{{ .Site.Params.social.twitter_handle }}">
+<meta name="twitter:creator"     content="{{ .Site.Params.social.twitter_handle }}">

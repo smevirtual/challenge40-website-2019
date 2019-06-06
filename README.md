@@ -21,7 +21,7 @@ machine prior to working with this codebase.
 **Developers should use macOS or Linux to work with this codebase. Issues
 encountered using Windows are not considered bugs at this time.**
 
-1.  Install Node.js version 8.0 or greater.
+1.  Install Node.js version 10.0 or greater.
 
     See [this page](https://nodejs.org/en/download/).
 
@@ -49,16 +49,8 @@ encountered using Windows are not considered bugs at this time.**
 
 For a freshly cloned repository, run:
 
-**Step 1**
-
 ```bash
 yarn install
-```
-
-**Step 2**
-
-```bash
-git lfs install
 ```
 
 Once all of the above prerequisites are installed, the following commands are
@@ -94,8 +86,9 @@ See the [Contributing Guidelines](.github/CONTRIBUTING.md) document.
 
 ### License
 
-All of the code in this repository is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
-A copy of this license is included in the root of this repository.
+Most of the source code in this repository is available under the [MIT License](https://choosealicense.com/licenses/mit/).
+
+If a file or the contents of a directory are available under a different license, the license information will be indicted in the header of the file or inside of the directory.
 
 ### SME Logos and Branding
 

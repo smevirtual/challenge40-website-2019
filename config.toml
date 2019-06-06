@@ -16,15 +16,14 @@ preserveTaxonomyNames = "true"
     keywords = ["engineering","manufacturing","sme","smetexaplex","education"]
 
     [params.social]
-    description = "We work to energize, mobilize and engage the global engineering and manufacturing community via the Internet."
-    twitter_handle="@smetexaplex"
+    description = "We work to energize, mobilize and engage the Texas engineering and manufacturing community."
+    twitter_handle="@smevirtual"
 
     [params.external]
-    feedback_form_url = "https://goo.gl/forms/tLNr9Ln6tMzzgV4i2"
     meetup_group_url = "https://www.meetup.com/smevirtual"
     youtube_channel_url = "https://www.youtube.com/smevirtual"
     discussion_forum_url = "https://www.reddit.com/r/SMEVirtual"
     discord_chat_invite_url = "https://discord.gg/ufADa72"
     github_org_url = "https://github.com/smevirtual"
-    linkedin_url = "https://www.linkedin.com/company/smetexaplex"
-    twitter_url = "https://twitter.com/smetexaplex"
+    linkedin_url = "https://www.linkedin.com/company/smevirtual"
+    twitter_url = "https://twitter.com/smevirtual"
