@@ -56,23 +56,19 @@ yarn install
 Once all of the above prerequisites are installed, the following commands are
 now available:
 
-| Command                   | Description                                                                                                                                                                        |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `yarn run build:dev`      | Build project in development mode. Development mode artifacts that are generated are suitable for easier debugging.                                                                |
-| `yarn run build:prod`     | Build project in production mode. Production mode artifacts that are generated are suitable for deployment to Firebase Hosting (or any CDN).                                       |
-| `yarn run clean`          | Delete the `/dist` folder which holds the generated artifacts from the build process.                                                                                              |
-| `yarn run deploy`         | Build project artifacts in production mode and deploy to Firebase Hosting.                                                                                                         |
-| `yarn run serve:dev`      | Build project artifacts in development mode and run a development browser that will automatically refresh when source files are changed and saved.                                 |
-| `yarn run serve:firebase` | Build project artifacts in production mode and launch a local Firebase Hosting environment to verify how the project will look when deployed to a public Firebase Hosting project. |
-| `yarn run serve:prod`     | Build project artifacts in production mode and launch a basic, local HTTP server without automatic reloading.                                                                      |
+| Command               | Description                                                                                                                                        |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `yarn run build:dev`  | Build project in development mode. Development mode artifacts that are generated are suitable for easier debugging.                                |
+| `yarn run build:prod` | Build project in production mode.                                                                                                                  |
+| `yarn run clean`      | Delete the `/docs` folder which holds the generated artifacts from the build process.                                                              |
+| `yarn run serve:dev`  | Build project artifacts in development mode and run a development browser that will automatically refresh when source files are changed and saved. |
+| `yarn run serve:prod` | Build project artifacts in production mode and launch a basic, local HTTP server without automatic reloading.                                      |
 
 ### Hosting Environment
 
-This project is set up to deploy to a [Firebase Hosting](https://firebase.google.com/docs/hosting/)
-environment. However, there is no reason that this project cannot be deployed to
-another hosting service of your choosing. If you choose another hosting service,
-delete the `.firebaserc` and `firebase.json` files in the root of the
-repository as they are only needed by Firebase.
+This project is set up to deploy to [GitHub Pages](https://pages.github.com/).
+However, there is no reason that this project cannot be deployed to
+another hosting service of your choosing.
 
 ### Community Participation Guidelines
 

@@ -22,12 +22,7 @@ const IS_PRODUCTION = process.env.NODE_ENV === "production";
 log.warn("[Gulp] build mode: ", IS_PRODUCTION ? "PRODUCTION" : "DEVELOPMENT");
 
 let suppressHugoErrors = false;
-const defaultHugoArgs = [
-  "-d",
-  "dist",
-  "--config",
-  "config.toml,contributors.toml,leadership_team.toml,sponsors.toml,partners.toml"
-];
+const defaultHugoArgs = ["-d", "docs", "--config", "config.toml,leadership_team.toml"];
 
 // Sitemaps need the absolute URL (along with the scheme) to be compatible with
 // major search engines. This changes the `baseURL` Hugo configuration setting
@@ -65,19 +60,19 @@ gulp.task("bundle", callback => {
  * COPY IMAGES TASK
  * -----------------------------------------------------------------------------
  */
-gulp.task("copy:images", () => gulp.src(["frontend/images/**/*"]).pipe(gulp.dest("dist")));
+gulp.task("copy:images", () => gulp.src(["frontend/images/**/*"]).pipe(gulp.dest("docs")));
 
 /**
  * COPY CONFIGS TASK
  * -----------------------------------------------------------------------------
  */
-gulp.task("copy:configs", () => gulp.src(["frontend/**/*.json"]).pipe(gulp.dest("dist")));
+gulp.task("copy:configs", () => gulp.src(["frontend/**/*.json"]).pipe(gulp.dest("docs")));
 
 /**
  * CLEAN TASK
  * -----------------------------------------------------------------------------
  */
-gulp.task("clean", () => del(["dist/**/*"]));
+gulp.task("clean", () => del(["docs/**/*"]));
 
 /**
  * RUN DEVELOPMENT SERVER TASK
@@ -89,7 +84,7 @@ gulp.task("dev-server", () => {
   suppressHugoErrors = true;
   browserSync.init({
     server: {
-      baseDir: "./dist"
+      baseDir: "./docs"
     }
   });
   gulp.watch(
@@ -109,7 +104,7 @@ gulp.task("generate-favicon", done => {
   realFavicon.generateFavicon(
     {
       masterPicture: "./frontend/images/master-favicon-512--default.png",
-      dest: "./dist",
+      dest: "./docs",
       iconsPath: "/",
       design: {
         ios: {
@@ -189,13 +184,13 @@ gulp.task("generate-favicon", done => {
  */
 gulp.task("inject-favicon", () =>
   gulp
-    .src(["dist/*.html"])
+    .src(["docs/*.html"])
     .pipe(
       realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code, {
         keep: 'meta[property="og:image"]'
       })
     )
-    .pipe(gulp.dest("dist"))
+    .pipe(gulp.dest("docs"))
 );
 
 /**

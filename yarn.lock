@@ -717,24 +717,6 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@carbon/grid@^10.2.0":
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/@carbon/grid/-/grid-10.2.0.tgz#8a0ed13eb00a0274cbd09a703d90527d18c1a6b3"
-  integrity sha512-cqrxald9cR8jFqAQZLO5GicdyjT3AnrA9WH6Giw11gvqyLZ7LyG5QLlcrCE3v2kMnUxySaPNfFCzUy03loPijA==
-  dependencies:
-    "@carbon/import-once" "10.2.0"
-    "@carbon/layout" "10.2.0"
-
-"@carbon/import-once@10.2.0":
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/@carbon/import-once/-/import-once-10.2.0.tgz#374ffb5b39583de3c173e2df2b5302a317dd1126"
-  integrity sha512-lN450opefCOTtTZJZ3vdAliD9FNeBX3K4sWswtxhZFxOW7TZpwriIq0nGqx8PgRMgHGVmktU5sJuzkims/kyFg==
-
-"@carbon/layout@10.2.0", "@carbon/layout@^10.2.0":
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/@carbon/layout/-/layout-10.2.0.tgz#3698b5c3e76bbe3b4b979708adbff68edfbb0e66"
-  integrity sha512-KT+VO7p7O0UOfvbfCw95GzJzuqCBREH1G7U3SUfCRl6kGe1KukIA4iwPDmCM1TB4JnIWPJSTZhY+LjpPSEHxgw==
-
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/identity-map/-/identity-map-1.0.2.tgz#1e6fe5d8027b1f285dc0d31762f566bccd73d5a9"
@@ -3762,7 +3744,7 @@ fast-deep-equal@^2.0.1:
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz#7b05218ddf9667bf7f370bf7fdb2cb15fdd0aa49"
   integrity sha1-ewUhjd+WZ79/Nwv3/bLLFf3Qqkk=
 
-fast-diff@^1.1.1:
+fast-diff@^1.1.1, fast-diff@^1.1.2:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/fast-diff/-/fast-diff-1.2.0.tgz#73ee11982d86caaf7959828d519cfe927fac5f03"
   integrity sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==
@@ -3836,6 +3818,14 @@ file-entry-cache@^4.0.0:
   integrity sha512-AVSwsnbV8vH/UVbvgEhf3saVQXORNv0ZzSkvkhQIaia5Tia+JhGTaa/ePUSVoPHQyGayQNmYfkzFi3WZV5zcpA==
   dependencies:
     flat-cache "^2.0.1"
+
+file-loader@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-4.0.0.tgz#c3570783fefb6e1bc0978a856f4bf5825b966c2a"
+  integrity sha512-roAbL6IdSGczwfXxhMi6Zq+jD4IfUpL0jWHD7fvmjdOVb7xBfdRUHe4LpBgO23VtVK5AW1OlWZo0p34Jvx3iWg==
+  dependencies:
+    loader-utils "^1.2.2"
+    schema-utils "^1.0.0"
 
 filename-regex@^2.0.0:
   version "2.0.1"
@@ -5847,7 +5837,7 @@ loader-utils@^0.2.16:
     json5 "^0.5.0"
     object-assign "^4.0.1"
 
-loader-utils@^1.0.1, loader-utils@^1.0.2, loader-utils@^1.1.0, loader-utils@^1.2.3:
+loader-utils@^1.0.1, loader-utils@^1.0.2, loader-utils@^1.1.0, loader-utils@^1.2.2, loader-utils@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.2.3.tgz#1ff5dc6911c9f0a062531a4c04b609406108c2c7"
   integrity sha512-fkpz8ejdnEMG3s37wGL07iSBDg99O9D5yflE9RGNH3hRdx9SOwYfnGYdZOUIZitN8E+E2vkq3MUMYMvPYl5ZZA==
@@ -7958,6 +7948,13 @@ preserve@^0.2.0:
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
   integrity sha1-gV7R9uvGWSb4ZbMQwHE7yzMVzks=
 
+prettier-linter-helpers@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/prettier-linter-helpers/-/prettier-linter-helpers-1.0.0.tgz#d23d41fe1375646de2d0104d3454a3008802cf7b"
+  integrity sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==
+  dependencies:
+    fast-diff "^1.1.2"
+
 prettier@^1.17.1:
   version "1.17.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.17.1.tgz#ed64b4e93e370cb8a25b9ef7fef3e4fd1c0995db"
@@ -8169,6 +8166,14 @@ raw-body@^2.3.2:
     http-errors "1.6.3"
     iconv-lite "0.4.23"
     unpipe "1.0.0"
+
+raw-loader@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-3.0.0.tgz#9a660dc9cfbfb8324eede3ea3511454d2a5d0389"
+  integrity sha512-FsELYliOpX5HdPdxa7PzTmEc5OTchmLUs/r4f8oLDGCYE+xC2FjVbDXzdyLcBrdlDnvkx1x5wzphixcWpxJG5w==
+  dependencies:
+    loader-utils "^1.1.0"
+    schema-utils "^1.0.0"
 
 rc@^1.2.7:
   version "1.2.8"
@@ -9587,6 +9592,13 @@ stylelint-order@^0.8.1:
     lodash "^4.17.4"
     postcss "^6.0.14"
     postcss-sorting "^3.1.0"
+
+stylelint-prettier@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/stylelint-prettier/-/stylelint-prettier-1.1.1.tgz#213873c1d0097cd0985dafc766197dcd955e21c5"
+  integrity sha512-H7Zjb+9ufF0dTjjJ4qSbN/yeAV14BNUK5rl267lvYfmmW4Swlz4a2rfwqqgiN/YlntHXXzM6Nh/UXHFIvLI8zA==
+  dependencies:
+    prettier-linter-helpers "^1.0.0"
 
 stylelint-scss@^3.2.0:
   version "3.5.4"

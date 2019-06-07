@@ -18,7 +18,8 @@
   <body>
     {{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
 
-    <main role="main">
+    <main>
+      {{ block "news-ticker" . }}{{ partial "site/news-ticker.html" . }}{{ end }}
       {{ block "main" . }}{{ end }}
     </main>
 

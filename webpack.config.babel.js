@@ -48,7 +48,7 @@ export default {
     filename: IS_PRODUCTION ? "[name].min.[hash].js" : "[name].js",
     sourceMapFilename: IS_PRODUCTION ? "[name].min.[hash].map" : "[name].map",
     libraryTarget: "umd",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "docs")
   },
 
   resolve: {
@@ -62,9 +62,21 @@ export default {
   module: {
     rules: [
       {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        exclude: /node_modules/,
+        loader: "file-loader"
+      },
+      {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        loader: "file-loader"
+      },
+      {
         test: /\.scss$/,
         use: [
-          "style-loader",
+          {
+            loader: "style-loader"
+          },
           {
             loader: "css-loader",
             options: {
@@ -81,7 +93,13 @@ export default {
               ]
             }
           },
-          "sass-loader?sourceMap"
+          {
+            loader: "sass-loader",
+            options: {
+              includePaths: [path.resolve("./node_modules")],
+              sourceMap: true
+            }
+          }
         ]
       },
       {

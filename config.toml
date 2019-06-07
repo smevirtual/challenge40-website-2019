@@ -1,8 +1,8 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "SME Texaplex Virtual Chapter"
-publishDir = "dist"
-preserveTaxonomyNames = "true"
+publishDir = "docs"
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [sitemap]
   changefreq = "monthly"
@@ -27,3 +27,4 @@ preserveTaxonomyNames = "true"
     github_org_url = "https://github.com/smevirtual"
     linkedin_url = "https://www.linkedin.com/company/smevirtual"
     twitter_url = "https://twitter.com/smevirtual"
+    this_url = "https://github.com/smevirtual/texaplex-website"
