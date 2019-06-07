@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+  <head>
+    {{ partial "site/google-analytics.html" . }}
+
+    {{ block "meta" . }}{{ partial "site/meta.html" . }}{{ end }}
+
+    <title>{{ block "title" . }}{{- with .Title }}{{ . }} | {{ end }}{{ .Site.Title -}}{{ end }}</title>
+
+    {{ range .AlternativeOutputFormats }}
+        <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+    {{ end }}
+
+    {{ partial "site/scripts.html" . }}
+
+    {{ block "bottom-scripts" . }}{{ end }}
+  </head>
+  <body>
+    {{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
+
+    <main>
+      {{ block "news-ticker" . }}{{ partial "site/news-ticker.html" . }}{{ end }}
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}
+  </body>
+</html>

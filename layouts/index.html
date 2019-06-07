@@ -1,0 +1,67 @@
+{{ define "bottom-scripts" }}
+
+{{ end }}
+
+{{ define "main" }}
+
+<section class="smev--features">
+  <div class="smev--container smev--py--layout--5">
+    <h1 class="smev--section-header__light smev--pb--layout--3">Our Principles and Goals</h1>
+    <div class="smev--grid--3-col">
+      <article class="smev--features--item">
+        <img src="{{ .Site.BaseURL }}texaplex-region--light.svg" alt="Texaplex Region" />
+        <h2>Virtual By Default. Serving Texas and beyond.</h2>
+        <p>We embrace the Internet as the primary method of engagement with our members and the entire engineering community.</p>
+      </article>
+      <article class="smev--features--item">
+        <img src="{{ .Site.BaseURL }}workshops--light.svg" alt="Workshops" />
+        <h2>Building the next generation workforce</h2>
+        <p>Manufacturing is moving fast - and evolving. For experienced professionals and students alike, it can be challenging to stay on top of it all.</p>
+        <p>Join our <a href="{{ .Site.Params.external.meetup_group_url }}">Meetup group</a> to get notifications for when we launch multi-day workshops, snapshot webinars and other online educational events.</p>
+      </article>
+      <article class="smev--features--item">
+        <img src="{{ .Site.BaseURL }}open-source-projects--light.svg" alt="Open Source Projects" />
+        <h2>Open Source is our DNA</h2>
+        <p>It may surprise you to learn that much of Smart Manufacturing is built on <a href="{{ .Site.Params.external.github_org_url }}">open source software</a> and, recently, <a href="https://www.raspberrypi.org/">hardware</a>.</p>
+        <p>We are entirely open source - from <a href="{{ .Site.Params.external.this_url }}">this website</a> to the web applications that we use internally to the <a href="https://smevirtual.com/training/">workshop materials</a> we produce. Everything.</p>
+      </article>
+      <article class="smev--features--item">
+        <img src="{{ .Site.BaseURL }}virtual-tours--light.svg" alt="Virtual Tours" />
+        <h2>Engagement on your schedule</h2>
+        <p>Your time is at a premium nowadays. Busy work schedules. Traffic. Family life. We understand.</p>
+        <p>All of our events are live-streamed, recorded and instantly available on <a href="{{ .Site.Params.external.youtube_channel_url }}">YouTube</a>. We also build unique, engaging and immersive web experiences to enrich and educate.</p>
+      </article>
+      <article class="smev--features--item">
+        <img src="{{ .Site.BaseURL }}conversations--light.svg" alt="Conversations" />
+        <h2>Conversations that are always on</h2>
+        <p>Need some ideas for a class project? Want to ask the community for technical advice? Have any questions about a workshop?</p>
+        <p>No problem. Join our <a href="{{ .Site.Params.external.discord_chat_invite_url }}">chat</a> and subscribe to our <a href="{{ .Site.Params.external.discussion_forum_url }}">subreddit</a>. Start a conversation today. Open to the public.</p>
+      </article>
+      <article class="smev--features--item">
+        <img src="{{ .Site.BaseURL }}open-by-design--light.svg" alt="Open By Design" />
+        <h2>Open By Design</h2>
+        <p>A chapter is only as good as its ability to listen and adapt to the needs of its members. We welcome your feedback — good or bad.</p>
+        <p>Reaching out is easy. Start a conversation on our <a href="{{ .Site.Params.external.discussion_forum_url }}">subreddit</a>, hit us up on <a href="{{ .Site.Params.external.discord_chat_invite_url }}">chat</a> or shoot us a note on <a href="{{ .Site.Params.external.twitter_url }}">Twitter</a>.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="smev--leadership">
+  <div class="smev--container smev--py--layout--5">
+    <h1 class="smev--section-header__dark smev--pb--layout--3">Leadership Committee</h1>
+    <div class="smev--grid--4-col">
+      {{ range $.Site.Params.leaders }}
+      <article class="smev--leadership--item">
+        <img src="{{ .Site.BaseURL }}{{ .profile_picture_filename }}" alt="{{ .name }}" />
+        <h2><a href="{{ .info_url }}">{{ .name }}</a></h2>
+        <p>{{ .title }}</p>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{.Content}}
+
+{{ end }}

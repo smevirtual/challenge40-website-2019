@@ -1,0 +1,43 @@
+trigger:
+  - master
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: 10.x
+    displayName: 'Install Node.js.'
+
+  - script: sudo apt-get -y install hugo
+    displayName: 'Install Hugo.'
+
+  - script: yarn install
+    displayName: 'Install npm dependencies for building site.'
+
+  - script: yarn run build:prod
+    displayName: 'Build site with production settings.'
+
+  - script: |
+      git config --local user.name "Azure Pipelines"
+      git config --local user.email "azuredevops@microsoft.com"
+      git add .
+      git commit -m "Publish to GitHub Pages  ***NO_CI***"
+    displayName: 'Build and commit site.'
+
+  - task: DownloadSecureFile@1
+    inputs:
+      secureFile: texaplex_website_deploy_key
+    displayName: 'Get the deploy key.'
+
+  - script: |
+      mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa
+      chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
+      ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+      git remote set-url --push origin git@github.com:smevirtual/texaplex-website.git
+      git push origin HEAD:master
+    displayName: 'Publish the GitHub Page.'
+    condition: |
+      and(not(eq(variables['Build.Reason'], 'PullRequest')),
+        eq(variables['Build.SourceBranch'], 'refs/heads/master'))
