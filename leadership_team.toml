@@ -3,22 +3,26 @@
     name = "Adam Cook"
     info_url = "https://twitter.com/AdamJosephCook"
     title = "Leadership Committee Member"
+    company = "Alliedstrand"
     profile_picture_filename = "adam-cook-profile-image.png"
 
     [[params.leaders]]
     name = "Art Palos"
     info_url = "https://www.linkedin.com/in/artemio-palos-2528942b/"
     title = "Leadership Committee Member"
+    company = "Nordson Xaloy"
     profile_picture_filename = "art-palos-profile-image.png"
 
     [[params.leaders]]
     name = "Ron Gill"
     info_url = "https://www.linkedin.com/in/ron-gill-atf-hsme-cmfge-9aa77b1b/"
     title = "Transition Advisor"
+    company = "The Boeing Company (Retired)"
     profile_picture_filename = "ron-gill-profile-image.png"
 
     [[params.leaders]]
     name = "Mark Price"
     info_url = "https://www.linkedin.com/in/mark-price-93390b14/"
-    title = "SME Staff Liaison"
+    title = "SME National Liaison"
+    company = "SME"
     profile_picture_filename = "mark-price-profile-image.png"
