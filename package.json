@@ -17,9 +17,6 @@
     "build:dev": "cross-env DEPLOY_BASE_URL=http://lvh.me:3000/ gulp build",
     "build:prod": "cross-env NODE_ENV=production DEPLOY_BASE_URL=/ gulp build",
     "clean": "gulp clean",
-    "favicon:generate": "gulp generate-favicon",
-    "favicon:inject": "gulp inject-favicon",
-    "favicon:update": "gulp check-favicon-update",
     "postinstall": "ts-node jigs-bootstrap.ts",
     "serve:dev": "cross-env DEPLOY_BASE_URL=http://lvh.me:3000/ gulp serve",
     "serve:prod": "cross-env NODE_ENV=production DEPLOY_BASE_URL=http://lvh.me:8080/ gulp build && http-server ./docs"
@@ -50,7 +47,6 @@
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-copy": "^1.1.0",
-    "gulp-real-favicon": "^0.3.0",
     "gulp-rename": "^1.3.0",
     "gulp-sass": "^4.0.1",
     "gulp-sass-lint": "^1.4.0",

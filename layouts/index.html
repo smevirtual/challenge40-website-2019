@@ -95,8 +95,11 @@
       {{ range $.Site.Params.leaders }}
       <article class="smev--leadership--item">
         <img src="{{ .Site.BaseURL }}{{ .profile_picture_filename }}" alt="{{ .name }}" />
-        <h2><a href="{{ .info_url }}">{{ .name }}</a></h2>
-        <p>{{ .title }}</p>
+        <div class="smev--leadership--item--details">
+          <h2><a href="{{ .info_url }}">{{ .name }}</a></h2>
+          <p><strong>{{ .title }}</strong></p>
+          <p>{{ .company }}</p>
+        </div>
       </article>
       {{ end }}
     </div>

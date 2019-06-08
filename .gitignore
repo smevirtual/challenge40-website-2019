@@ -247,9 +247,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# For 'gulp-real-favicon'
-favicondata.json
-
 # Hugo
 public/
 resources/
