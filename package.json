@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build:dev": "cross-env DEPLOY_BASE_URL=http://lvh.me:3000/ gulp build",
-    "build:prod": "cross-env NODE_ENV=production DEPLOY_BASE_URL=https://smevirtual.github.io/texaplex-website/ gulp build",
+    "build:prod": "cross-env NODE_ENV=production DEPLOY_BASE_URL=/ gulp build",
     "clean": "gulp clean",
     "favicon:generate": "gulp generate-favicon",
     "favicon:inject": "gulp inject-favicon",

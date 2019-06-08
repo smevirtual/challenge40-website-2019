@@ -72,7 +72,7 @@ gulp.task("copy:configs", () => gulp.src(["frontend/**/*.json"]).pipe(gulp.dest(
  * CLEAN TASK
  * -----------------------------------------------------------------------------
  */
-gulp.task("clean", () => del(["docs/**/*"]));
+gulp.task("clean", () => del(["docs/**", "!docs", "!docs/CNAME"]));
 
 /**
  * RUN DEVELOPMENT SERVER TASK
