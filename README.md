@@ -1,5 +1,7 @@
 ## SME Texaplex Virtual Chapter Website
 
+[![Build Status](https://dev.azure.com/smevirtual/texaplex-website/_apis/build/status/smevirtual.texaplex-website?branchName=master)](https://dev.azure.com/smevirtual/texaplex-website/_build/latest?definitionId=3&branchName=master)
+
 This repository contains the source code for the official homepage of the SME
 Texaplex Virtual Chapter found at [smetexaplex.com](https://www.smetexaplex.com).
 

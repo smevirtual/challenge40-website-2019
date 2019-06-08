@@ -44,6 +44,10 @@ strong,
   background-color: #fff;
 }
 
+.smev--bg--gray-10 {
+  background-color: #f3f3f3;
+}
+
 .smev--bg--neutral-white-3 {
   background-color: #f6f6f6;
 }
@@ -56,25 +60,35 @@ strong,
   background-color: #3151b7;
 }
 
+.smev--links-list {
+  list-style: none;
+
+  & > li {
+    margin-bottom: 0.5rem;
+  }
+}
+
 body {
   @extend .smev--text--gray-120;
   @extend .smev--bg--white;
   @extend .smev--font--regular;
   font-size: 1rem;
   font-family: "Inter", Helvetica Neue, Arial, sans-serif;
-  line-height: 1.375rem;
+  line-height: 1.5rem;
   letter-spacing: 0px;
   line-height: 1;
 }
 
 p {
   font-size: 1rem;
-  line-height: 1.375rem;
+  line-height: 1.5rem;
 }
 
 a {
   @extend .smev--text--blue-50;
   @extend .smev--no-underline;
+  font-size: 1rem;
+  line-height: 1.375rem;
 
   &:hover,
   &:focus,
@@ -123,6 +137,16 @@ a {
   }
 }
 
+.smev--py--layout--1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.smev--py--layout--3 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .smev--py--layout--5 {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -142,6 +166,10 @@ a {
 
 .smev--pt--layout--3 {
   padding-top: 2rem;
+}
+
+.smev--pl--layout--3 {
+  padding-left: 2rem;
 }
 
 .smev--pb--layout--3 {
@@ -168,6 +196,7 @@ a {
   @extend .smev--font--bold;
   font-size: 1.75rem;
   line-height: 2.25rem;
+  border-bottom: 1px solid #121212;
 }
 
 .smev--header--tagline {
@@ -183,12 +212,8 @@ a {
 }
 
 .smev--news-ticker {
-  @extend .smev--bg--indigo-50;
+  @extend .smev--bg--gray-10;
   height: 4rem;
-}
-
-.smev--leadership {
-  @extend .smev--bg--ultramarine-60;
 }
 
 .smev--footer {
@@ -231,49 +256,42 @@ a {
   }
 }
 
-.smev--grid--3-col {
+.smev--features--grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+@media (min-width: 66rem) {
+  .smev--features--grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+.smev--leadership--grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 2rem;
+  grid-row-gap: 0;
   justify-items: stretch;
   align-items: stretch;
 }
 
 @media (min-width: 42rem) {
-  .smev--grid--3-col {
+  .smev--leadership--grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
   }
 }
 
 @media (min-width: 66rem) {
-  .smev--grid--3-col {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-  }
-}
-
-.smev--grid--4-col {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  justify-items: stretch;
-  align-items: stretch;
-}
-
-@media (min-width: 42rem) {
-  .smev--grid--4-col {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
-}
-
-@media (min-width: 66rem) {
-  .smev--grid--4-col {
+  .smev--leadership--grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
   }
@@ -281,41 +299,42 @@ a {
 
 .smev--features--item {
   @extend .smev--bg--white;
-  @extend .smev--p--layout--3;
-  border: 2px solid #000;
+  @extend .smev--pt--layout--3;
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  grid-template-rows: auto;
 
   & img {
     height: 8rem;
   }
 
   & h2 {
-    @extend .smev--pt--layout--1;
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 
   & p {
-    @extend .smev--pt--layout--1;
+    @extend .smev--py--layout--1;
   }
+}
 
-  & a {
-    @extend .smev--font--bold;
-  }
+.smev--features--item--details {
+  @extend .smev--pl--layout--3;
 }
 
 .smev--leadership--item {
   @extend .smev--bg--white;
-  @extend .smev--p--layout--3;
-  border: 1px solid #3151b7;
+  @extend .smev--pt--layout--3;
 
   & img {
-    height: 16rem;
+    height: 11rem;
   }
 
   & h2 {
     @extend .smev--pt--layout--1;
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    @extend .smev--font--regular;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -331,7 +350,7 @@ a {
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
