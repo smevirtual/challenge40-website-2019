@@ -1,14 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>SME Texaplex Virtual Chapter</title>
-    <link>/</link>
-    <description>Recent content on SME Texaplex Virtual Chapter</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-  </channel>
-</rss>
+version https://git-lfs.github.com/spec/v1
+oid sha256:8687f991cc219cd17d31298b22215034975dd2d399a9bcfb85012bb43a49ea73
+size 456
