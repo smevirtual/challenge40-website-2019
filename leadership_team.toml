@@ -2,14 +2,14 @@
     [[params.leaders]]
     name = "Adam Cook"
     info_url = "https://twitter.com/AdamJosephCook"
-    title = "Leadership Committee Member"
+    title = "Chapter Leader"
     company = "Alliedstrand"
     profile_picture_filename = "adam-cook-profile-image.png"
 
     [[params.leaders]]
     name = "Art Palos"
     info_url = "https://www.linkedin.com/in/artemio-palos-2528942b/"
-    title = "Leadership Committee Member"
+    title = "Chapter Leader"
     company = "Nordson Xaloy"
     profile_picture_filename = "art-palos-profile-image.png"
 
