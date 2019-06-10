@@ -1,6 +1,9 @@
 ## SME Texaplex Virtual Chapter Website
 
 [![Build Status](https://dev.azure.com/smevirtual/texaplex-website/_apis/build/status/smevirtual.texaplex-website?branchName=master)](https://dev.azure.com/smevirtual/texaplex-website/_build/latest?definitionId=3&branchName=master)
+<a href="https://github.com/smevirtual/texaplex-website/blob/master/LICENSE">
+<img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="The SME Texaplex Virtual Chapter website source is released under The MIT License." />
+</a>
 
 This repository contains the source code for the official homepage of the SME
 Texaplex Virtual Chapter found at [smetexaplex.com](https://www.smetexaplex.com).
